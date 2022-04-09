@@ -49,7 +49,7 @@
 \newcommand{\rthm}[1][\sct]{{\color{zr}\textit{Theorem #1}}} % Refer theorem
 
 \newcommand{\sct}{\thesection.\thescount} % Counter
-\newcommand{\sctd}[2][0]{\the\numexpr\value{section}-#1\relax.\the\numexpr\value{scount}-#2\relax} % Delta counter
+\newcommand{\sctr}[2][0]{\the\numexpr\value{section}-#1\relax.\the\numexpr\value{scount}-#2\relax} % Relative counter
 
 % Equations
 \newcommand{\C}{\mathbb{C}} % Complex
@@ -61,7 +61,7 @@
 \newcommand{\Z}{\mathbb{Z}} % Integer
 
 \newcommand{\GL}{\mathrm{GL}} % General linear group
-\newcommand{\SL}{\mathrm{SL}} % Speical linear group
+\newcommand{\SL}{\mathrm{SL}} % Special linear group
 
 \newcommand{\abs}[1]{\left| #1\right|} % Absolute
 \newcommand{\bra}[1]{\left\langle #1\right\rangle} % Angled brackets
@@ -123,10 +123,10 @@ This course requires prerequisites of
 
 % Reference list
 \newenvironment{reflist}{
-\begin{alist}
-  \item Professor(s) associated to \textit{\gettitle}
+  \begin{alist}
+    \item Professor(s) associated to \textit{\gettitle}
 }{
-\end{alist}
+  \end{alist}
 }
 
 % ------------------------------------------------------------ %
@@ -135,108 +135,108 @@ This course requires prerequisites of
 \newcounter{scount}[section] % Counter
 
 \newenvironment{crl}{ % Corollary
-\parindent0pt
-\begin{siderule}[linecolor=zr]{\color{zr}\textit{Corollary. }}
+  \parindent 0pt
+  \begin{siderule}[linecolor=zr]{\color{zr}\textit{Corollary. }}
 }{
-\end{siderule}
+  \end{siderule}
 }
 
 \newenvironment{cmt}{ % Comment
-\parindent0pt
-\begin{siderule}[linecolor=zp]{\color{zp}\textit{Comment. }}
+  \parindent 0pt
+  \begin{siderule}[linecolor=zp]{\color{zp}\textit{Comment. }}
 }{
-\end{siderule}
+  \end{siderule}
 }
 
 \newenvironment{dft}{ % Definition
-\parindent0pt
-\refstepcounter{scount}
-\begin{siderule}[linecolor=zg]{\color{zg}\textit{Definition \sct. }}
+  \parindent 0pt
+  \refstepcounter{scount}
+  \begin{siderule}[linecolor=zg]{\color{zg}\textit{Definition \sct. }}
 }{
-\end{siderule}
+  \end{siderule}
 }
 
 \newenvironment{exm}{ % Example
-\parindent0pt
-\refstepcounter{scount}
-\begin{siderule}[linecolor=zb]{\color{zb}\textit{Example \sct. }}
+  \parindent 0pt
+  \refstepcounter{scount}
+  \begin{siderule}[linecolor=zb]{\color{zb}\textit{Example \sct. }}
 }{
-\end{siderule}
+  \end{siderule}
 }
 
 \newenvironment{fig}{ % Figure
-\parindent0pt
-\refstepcounter{scount}
-\begin{siderule}[linecolor=zy]{\color{zy}\textit{Figure \sct. }}\n
-
+  \parindent 0pt
+  \refstepcounter{scount}
+  \begin{siderule}[linecolor=zy]{\color{zy}\textit{Figure \sct. }}\n
+  
 }{
-\end{siderule}
+  \end{siderule}
 }
 
 \newenvironment{prv}{ % Proof
-\parindent0pt
-\begin{siderule}[linecolor=zr]\prf
+  \parindent 0pt
+  \begin{siderule}[linecolor=zr]\prf
 }{
-\end{siderule}
+  \end{siderule}
 }
 
 \newenvironment{pst}{ % Proposition
-\parindent0pt
-\refstepcounter{scount}
-\begin{siderule}[linecolor=zr]{\color{zr}\textit{Proposition \sct. }}
+  \parindent 0pt
+  \refstepcounter{scount}
+  \begin{siderule}[linecolor=zr]{\color{zr}\textit{Proposition \sct. }}
 }{
-\end{siderule}
+  \end{siderule}
 }
 
 \newenvironment{tcn}{ % Technique
-\parindent0pt
-\begin{siderule}[linecolor=zp]{\color{zp}\textit{Technique. }}
+  \parindent 0pt
+  \begin{siderule}[linecolor=zp]{\color{zp}\textit{Technique. }}
 }{
-\end{siderule}
+  \end{siderule}
 }
 
 \newenvironment{thm}{ % Theorem
-\parindent0pt
-\refstepcounter{scount}
-\begin{siderule}[linecolor=zr]{\color{zr}\textit{Theorem \sct. }}
+  \parindent 0pt
+  \refstepcounter{scount}
+  \begin{siderule}[linecolor=zr]{\color{zr}\textit{Theorem \sct. }}
 }{
-\end{siderule}
+  \end{siderule}
 }
 
 \newenvironment{rmatrix}{ % Matrix in round brackets
-  \left( \begin{matrix}
+  \left(\begin{matrix}
 }{
   \end{matrix}\right)
 }
 
 \newenvironment{alist}{ % Alphabetical list
-\begin{enumerate}[label=(\alph*)]
+  \begin{enumerate}[label=(\alph*)]
 }{
-\end{enumerate}
+  \end{enumerate}
 }
 
 \newenvironment{Alist}{ % Capitalized alphabetical list
-\begin{enumerate}[label=(\Alph*)]
+  \begin{enumerate}[label=(\Alph*)]
 }{
-\end{enumerate}
+  \end{enumerate}
 }
 
 \newenvironment{nlist}{ % Number list
-\begin{enumerate}[label=(\arabic*)]
+  \begin{enumerate}[label=(\arabic*)]
 }{
-\end{enumerate}
+  \end{enumerate}
 }
 
 \newenvironment{plist}{ % Point list
-\begin{itemize}
+  \begin{itemize}
 }{
-\end{itemize}
+  \end{itemize}
 }
 
 \newenvironment{rlist}{ % Roman list
-\begin{enumerate}[label=(\roman*)]
+  \begin{enumerate}[label=(\roman*)]
 }{
-\end{enumerate}
+  \end{enumerate}
 }
 
 \newmdenv[ % Siderule line
